@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Insert Order Detail</title>
+    </head>
+    <body>
+        <form action="ControllerOrderDetail" method="post">
+            <table>
+                <tr>
+                    <h1>Insert Order Detail</h1>
+                </tr>
+                <tr>
+                    <td>OrderID</td>
+                    <td>
+                        <select name="orderId">
+                            <option value="11080">11080</option>
+                            <option value="11081">11081</option>
+                            <option value="11082">11082</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>ProductID</td>
+                    <td>
+                        <select name="productId">
+                            <option value="1">Chai</option>
+                            <option value="2">Chang</option>
+                            <option value="3">Aniseed Syrup</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>UnitPrice</td>
+                    <td>
+                        <input type="number" name="unitPrice" step="0.1">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Quantity</td>
+                    <td>
+                        <input type="number" name="quantity">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Discount</td>
+                    <td>
+                        <input type="number" name="discount" step="0.01" max="1" min="0">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        in
+                    </td>
+                    <td></td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
