@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Insert employee</title>
+    </head>
+    <body>
+        <p>
+            <a href="controllerEmployee">List All Employee</a>
+        </p>
+        <form action="controllerEmployee?do=InsertEmployee" method="POST">
+            <table>
+                <tr>
+                    <h1>Insert employee</h1>
+                </tr>
+                <tr>
+                    <td>LastName</td>
+                    <td>
+                        <input type="text" name="lastName">
+                    </td>
+                </tr>
+                <tr>
+                    <td>FirstName</td>
+                    <td>
+                        <input type="text" name="firstName">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Title</td>
+                    <td>
+                        <input type="text" name="title">
+                    </td>
+                </tr>
+                <tr>
+                    <td>TitleOfCourtesy</td>
+                    <td>
+                        <input type="text" name="titleOfCourtesy">
+                    </td>
+                </tr>
+                <tr>
+                    <td>BirthDate</td>
+                    <td>
+                        <input type="date" name="birthDate">
+                    </td>
+                </tr>
+                <tr>
+                    <td>HireDate</td>
+                    <td>
+                        <input type="date" name="hireDate">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Address</td>
+                    <td>
+                        <input type="text" name="address">
+                    </td>
+                </tr>
+                <tr>
+                    <td>City</td>
+                    <td>
+                        <input type="text" name="city">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Region</td>
+                    <td>
+                        <input type="text" name="region">
+                    </td>
+                </tr>
+                <tr>
+                    <td>PostalCode</td>
+                    <td>
+                        <input type="text" name="postalCode">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Country</td>
+                    <td>
+                        <input type="text" name="country">
+                    </td>
+                </tr>
+                <tr>
+                    <td>HomePhone</td>
+                    <td>
+                        <input type="text" name="homePhone">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Extension</td>
+                    <td>
+                        <input type="text" name="extension">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Photo</td>
+                    <td>
+                        <input type="file" name="photo">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Notes</td>
+                    <td>
+                        <!-- <input type="text" name="Notes"> -->
+                        <textarea name="Notes" cols="21" rows="10"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>ReportsTo</td>
+                    <td>
+                        <select name="reportsTo">
+                            <option value="0">None</option>
+                            <option value="1">Nancy Davolio</option>
+                            <option value="2">Andrew Fuller</option>
+                            <option value="3">Janet Leverling</option>
+                            <option value="4">Margaret Peacock</option>
+                            <option value="5">Steven Buchanan</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>PhotoPath</td>
+                    <td>
+                        <input type="text" name="photoPath">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="Send">
+                    </td>
+                    <td>
+                        <input type="reset" value="Clear">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>

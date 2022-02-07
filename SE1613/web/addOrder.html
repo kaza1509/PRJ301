@@ -7,7 +7,10 @@
         <title>Insert orders</title>
     </head>
     <body>
-        <form action="ControllerOrder" method="post">
+        <p>
+            <a href="controllerOrder">List All Order</a>
+        </p>
+        <form action="controllerOrder?do=InsertOrder" method="post">
             <table>
                 <tr>
                     <h1>Insert orders</h1>
@@ -34,6 +37,7 @@
                         </select>
                     </td>
                 </tr>
+                <tr><td><b>OrderDate < ShipDate < RequiredDate</b></td></tr>
                 <tr>
                     <td>OrderDate</td>
                     <td>

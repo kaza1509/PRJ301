@@ -86,9 +86,8 @@ public class DAOCustomer extends ConnectDB {
         return n;
     }
 
-    public Vector<Customer> listAll() {
+    public Vector<Customer> listAll(String sql) {
         Vector<Customer> vector = new Vector<>();
-        String sql = "select * from Customers";
         ResultSet rs = getData(sql);
 
         try {

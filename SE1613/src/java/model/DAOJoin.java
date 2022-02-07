@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package model;
 
 import entity.OrderDetail;
@@ -18,12 +13,11 @@ public class DAOJoin extends ConnectDB {
 
     public Vector<OrderDetail> listAll() {
         Vector<OrderDetail> vector = new Vector<>();
-        String sql = "select od.OrderID, od.ProductID, od.UnitPrice, od.Quantity, od.Discount from [Order Details] od"
-                + " join Orders o on o.OrderID = od.OrderID"
-                + " join Products pro on od.ProductID = pro.ProductID"
-                + " join Suppliers sup on pro.SupplierID = sup.SupplierID"
-                + " join Customers cus on o.CustomerID = cus.CustomerID"
-                + " join Employees emp on o.EmployeeID = emp.EmployeeID";
+        String sql = "select ord.* from Categories cate join Products pro\n"
+                + "		on cate.CategoryID = pro.CategoryID join [Order Details] ord \n"
+                + "		on ord.ProductID = pro.ProductID join Orders od\n"
+                + "		on od.OrderID = ord.OrderID join Customers cus\n"
+                + "		on cus.CustomerID = od.CustomerID";
         ResultSet rs = getData(sql);
 
         try {
@@ -49,6 +43,6 @@ public class DAOJoin extends ConnectDB {
         for (OrderDetail orderDetail : vector) {
             System.out.println(orderDetail);
         }
-        dao.listAll();
+//        dao.listAll();
     }
 }

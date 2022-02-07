@@ -4,31 +4,37 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Insert suppliers</title>
+        <title>Insert Customer</title>
     </head>
     <body>
         <p>
-            <a href="ControllerSupplier?do=listAllSupplier">ListAll Supplier</a>
+            <a href="controllerCustomer">listAllCustomer</a>
         </p>
-        <form action="ControllerSupplier?do=insertSupplier" method="post">
+        <form action="ControllerCustomer?do=InsertCustomer" method="POST">
             <table>
                 <tr>
-                    <h1>Insert suppliers</h1>
+                    <h1>Insert Customer</h1>
                 </tr>
                 <tr>
-                    <td>CompanyName</td>
+                    <td>Customer id</td>
+                    <td>
+                        <input type="text" name="customerId">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Company Name</td>
                     <td>
                         <input type="text" name="companyName">
                     </td>
                 </tr>
                 <tr>
-                    <td>ContactName</td>
+                    <td>Contact Name</td>
                     <td>
                         <input type="text" name="contactName">
                     </td>
                 </tr>
                 <tr>
-                    <td>ContactTitle</td>
+                    <td>Contact Title</td>
                     <td>
                         <input type="text" name="contactTitle">
                     </td>
@@ -52,9 +58,9 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>PostalCode</td>
+                    <td>Potal Code</td>
                     <td>
-                        <input type="text" name="postalCode">
+                        <input type="text" name="potalCode">
                     </td>
                 </tr>
                 <tr>
@@ -66,19 +72,13 @@
                 <tr>
                     <td>Phone</td>
                     <td>
-                        <input type="tel" name="phone">
+                        <input type="text" name="phone">
                     </td>
                 </tr>
                 <tr>
                     <td>Fax</td>
                     <td>
                         <input type="text" name="fax">
-                    </td>
-                </tr>
-                <tr>
-                    <td>HomePage</td>
-                    <td>
-                        <input type="text" name="homePage">
                     </td>
                 </tr>
                 <tr>

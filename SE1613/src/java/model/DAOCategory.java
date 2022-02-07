@@ -52,9 +52,8 @@ public class DAOCategory extends ConnectDB {
         return n;
     }
 
-    public Vector<Category> listAll() {
+    public Vector<Category> listAll(String sql) {
         Vector<Category> vector = new Vector<>();
-        String sql = "select * from Categories";
         ResultSet rs = getData(sql);
         try {
             while (rs.next()) {
@@ -104,10 +103,10 @@ public class DAOCategory extends ConnectDB {
 //        ConnectDB.getMessageSQL("Update", n);
 
         //------------------ List all -------------------
-        Vector<Category> vector = dao.listAll();
-        for (Category cate : vector) {
-            System.out.println(cate);
-        }
+//        Vector<Category> vector = dao.listAll();
+//        for (Category cate : vector) {
+//            System.out.println(cate);
+//        }
 
         //------------------ Remove --------------------
 //        n = dao.removeCategory(9);

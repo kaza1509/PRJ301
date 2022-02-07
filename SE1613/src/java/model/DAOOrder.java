@@ -96,9 +96,8 @@ public class DAOOrder extends ConnectDB {
         return n;
     }
 
-    public Vector<Order> listAll() {
+    public Vector<Order> listAll(String sql) {
         Vector<Order> vector = new Vector<>();
-        String sql = "select * from Orders";
         ResultSet rs = getData(sql);
 
         try {

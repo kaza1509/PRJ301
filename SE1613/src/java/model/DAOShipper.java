@@ -54,9 +54,8 @@ public class DAOShipper extends ConnectDB {
         return n;
     }
 
-    public Vector<Shipper> listAll() {
+    public Vector<Shipper> listAll(String sql) {
         Vector<Shipper> vector = new Vector<>();
-        String sql = "select * from Shippers";
         ResultSet rs = getData(sql);
         try {
             while(rs.next()) {

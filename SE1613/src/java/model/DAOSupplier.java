@@ -80,9 +80,8 @@ public class DAOSupplier extends ConnectDB {
     }
 
     //select all the recored in suppliers table
-    public Vector<Supplier> listAll() {
+    public Vector<Supplier> listAll(String sql) {
         Vector<Supplier> vector = new Vector<>();
-        String sql = "select * from Suppliers";
         ResultSet rs = getData(sql);
         try {
             while (rs.next()) {

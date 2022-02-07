@@ -108,9 +108,8 @@ public class DAOEmployee extends ConnectDB {
         return n;
     }
 
-    public Vector<Employee> listAll() {
+    public Vector<Employee> listAll(String sql) {
         Vector<Employee> vector = new Vector<>();
-        String sql = "select * from Employees";
         ResultSet rs = getData(sql);
 
         try {

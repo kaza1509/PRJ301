@@ -60,17 +60,16 @@ public class DAOOrderDetail extends ConnectDB {
         return n;
     }
     
-    public Vector<OrderDetail> listAll() {
+    public Vector<OrderDetail> listAll(String sql) {
         Vector<OrderDetail> vector = new Vector<>();
-        String sql = "select * from [Order Details]";
         ResultSet rs = getData(sql);
         try {
             while (rs.next()) {
                 int orderId = rs.getInt(1);                
                 int productId = rs.getInt(2);
-                double unitPrice = rs.getDouble(3);
+                double unitPrice = rs.getDouble(3); 
                 int quantity = rs.getInt(4);
-                double discount = rs.getInt(5);
+                double discount = rs.getDouble(5);
                 
                 OrderDetail ord = new OrderDetail(orderId, productId, unitPrice, quantity, discount);
                 vector.add(ord);
@@ -97,18 +96,18 @@ public class DAOOrderDetail extends ConnectDB {
         DAOOrderDetail dao = new DAOOrderDetail();
         int n = 0;
         //--------------- insert record -----------------
-        n = dao.addOrderDetail(new OrderDetail(10248, 11, 30, 34, 0));
-        ConnectDB.getMessageSQL("Insert", n);
+//        n = dao.addOrderDetail(new OrderDetail(10248, 11, 30, 34, 0));
+//        ConnectDB.getMessageSQL("Insert", n);
 
         //------------------ Update ---------------------
 //        n = dao.updateOrderDetail(new OrderDetail(10249, 11, 3000, 3400, 0));
 //        ConnectDB.getMessageSQL("Update", n);
 
         //------------------ List all -------------------
-//        Vector<OrderDetail> vector = dao.listAll();
-//        for (OrderDetail orderDetail : vector) {
-//            System.out.println(orderDetail);
-//        }
+        Vector<OrderDetail> vector = dao.listAll("select * from [Order Details]");
+        for (OrderDetail orderDetail : vector) {
+            System.out.println(orderDetail);
+        }
 
         //------------------ Remove --------------------
 //        n = dao.removeOrderDetail(10248, 11);

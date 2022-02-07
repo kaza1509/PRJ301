@@ -80,9 +80,9 @@ public class DAOProduct extends ConnectDB {
         return n;
     }
 
-    public Vector<Product> listAll() {
+    public Vector<Product> listAll(String sql) {
         Vector<Product> vector = new Vector<>();
-        String sql = "select * from Products";
+//        String sql = "select * from Products";
         ResultSet rs = getData(sql);
 
         try {
@@ -169,21 +169,21 @@ public class DAOProduct extends ConnectDB {
 //        ConnectDB.getMessageSQL("Update", n);
 
         //------------------ List all -------------------
-//        Vector<Product> vector = dao.listAll();
-//        for (Product product : vector) {
-//            System.out.println(product);
-//        }
+        Vector<Product> vector = dao.listAll("select * from Products where ProductID = 1");
+        for (Product product : vector) {
+            System.out.println(product);
+        }
 
         //------------------ Remove --------------------
 //        n = dao.removeProduct(79);
 //        ConnectDB.getMessageSQL("Remove", n);
         //----------------- Search Product name -------
-        Vector<Product> vector = dao.searchProductByName("Gnocchi di nonna Alice");
-        if(vector.isEmpty()) System.out.println("Not exist Product");
-        else {
-            for (Product product : vector) {
-                System.out.println(product);
-            }
-        }
+//        Vector<Product> vector = dao.searchProductByName("Gnocchi di nonna Alice");
+//        if(vector.isEmpty()) System.out.println("Not exist Product");
+//        else {
+//            for (Product product : vector) {
+//                System.out.println(product);
+//            }
+//        }
     }
 }
